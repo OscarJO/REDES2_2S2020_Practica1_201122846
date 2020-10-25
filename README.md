@@ -12,5 +12,6 @@ PROCESO PARA PRACTICA 1
 8. De estar correctamente iniciado, vamos al navegador y se ingresa a la dirección 'IP-Instacia:80'.
 9. Se debería mostrar la página por default de apache.
 10. Creamos una página HTML para reemplazar el default de apache.
-11. Se reemplaza el archivo 'index.html' en el directorio default de apache por el archivo html que acabamos de crear.
+11. Se reemplaza el archivo 'index.html' en el directorio default de apache (usualmente suele ser '/var/www/html') por el archivo html que acabamos de crear.
 12. Al ingresar a la dirección 'IP-Instacia:80' ahora debería mostrar la página con la que reemplazamos a la página default.
+13. Si todavía aparece la página default podemos reiniciar el navegador o borrar el caché de la página y luego ya debe aparecer el sitio ya reemplazado.

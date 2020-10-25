@@ -3,19 +3,14 @@ REDES2_2S2020_Practica1_201122846
 PROCESO PARA PRACTICA 1
 
 1. Crear una instancia EC2.
-2. Configurar apache server en la instancia.
-3. Iniciar los servicios con el comando '$ sudo service httpd start'.
-4. Crear un punto de montaje.
-	4.1. Crear un directorio 'efs-mount-point under /var/www/html'.
-	4.2. Montar el sistema de archivos con el comando 'sudo mount -t efs fs-12345678:/ /var/www/html/efs-mount-point'.
-5. Añadir la regla para el grupo de seguridad.
-	5.1. Abrir la consola de la instancia.
-	5.2. Elegir la opción 'Grupos de seguridad'.
-	5.3. Elegir la opción 'Crear grupo de seguridad'.
-	5.4. Poner un nombre al grupo de seguridad.
-	5.5. Seleccionar el nombre de la VPC.
-	5.6. Crear el grupo.
-	5.7. En la consola, verificar las reglas por defecto del grupo recién creado.
-	5.8. Agregar una nueva regla eligiendo el protocolo HTTP.
-	5.10. Asegurarse que la regla sea válida para conexiones entrantes y salientes.
-6. 
+2. En la parte de configurar grupos de seguridad, dejamos por el momento la regla SSH y agregamos una HTTP de entrada en el puerto 80.
+3. Iniciar la instancia creada.
+4. Conectarse a la instancia por medio de la consola de AWS o cualquier herramienta de SSH.
+5. Instalar apache en la instancia.
+6. Utilizamos el comando 'sudo systemctl status apache'.
+7. Luego de ese comando, se mostrará en la pantalla si el servidor se ha iniciado de manera correcta.
+8. De estar correctamente iniciado, vamos al navegador y se ingresa a la dirección 'IP-Instacia:80'.
+9. Se debería mostrar la página por default de apache.
+10. Creamos una página HTML para reemplazar el default de apache.
+11. Se reemplaza el archivo 'index.html' en el directorio default de apache por el archivo html que acabamos de crear.
+12. Al ingresar a la dirección 'IP-Instacia:80' ahora debería mostrar la página con la que reemplazamos a la página default.

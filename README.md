@@ -15,3 +15,16 @@ PROCESO PARA PRACTICA 1
 11. Se reemplaza el archivo 'index.html' en el directorio default de apache (usualmente suele ser '/var/www/html') por el archivo html que acabamos de crear.
 12. Al ingresar a la dirección 'IP-Instacia:80' ahora debería mostrar la página con la que reemplazamos a la página default.
 13. Si todavía aparece la página default podemos reiniciar el navegador o borrar el caché de la página y luego ya debe aparecer el sitio ya reemplazado.
+
+PROCESO PARA PROYECTO 2
+
+14. Se crea una segunda instancia idéntica a la primera en donde también se instale el servidor apache y se reemplace al página default.
+15. Creamos un load ballancer.
+16. En el apartado 'Equilibrio de Carga' seleccionamos la opción 'Crear Load Balancer' y elegimos el balanceador clásico.
+17. Le asignamos un nombre al balanceador.
+18. Dejamos el protocolo por default que el HTTP en el puerto 80.
+19. Asignamos el grupo de seguridad correcto.
+20. Se seleccionan las instancias que van a utilizar el balanceador.
+21. Se agregan tags para el balanceador.
+22. Se termina de crear el balanceador y esperamos a que todo se inicie.
+23. Cuando todo está funcionando, utilizamos la dirección de DNS que nos proporciona el balanceador y esa será la dirección que utilizamos.

@@ -28,3 +28,18 @@ PROCESO PARA PROYECTO 2
 21. Se agregan tags para el balanceador.
 22. Se termina de crear el balanceador y esperamos a que todo se inicie.
 23. Cuando todo está funcionando, utilizamos la dirección de DNS que nos proporciona el balanceador y esa será la dirección que utilizamos.
+24. Lo siguiente es hacer las configuraciones del Route 53 para poder redireccionar el balanceador hacia el nombre de dominio creado anteriormente.
+24. Nos dirigimos al apartado con el servicio 'Route 53'.
+25. En las opciones elegimos 'Crear zona alojada'.
+26. Llenamos el nombre de dominio con el dominio que creamos.
+27. Dejamos la opción 'Zona alojada pública' seleccionada.
+28. Termina al proceso de crear la zona y se nos redirecciona a la zona creada.
+29. Nos dirigimos al sistio web en donde se creo el dominio (en este caso en my.freenom.com) y entramos a la configuración del dominio.
+30. Elegimos la opción de administrar el dominio y entramos a la opción de 'Nameserver'.
+31. Copiamos los nameservers que la zona alojada nos proporciona y los pegamos en el sitio del dominio como nuevos nameservers.
+32. En la consola de administración de la zona alojada elegimos la opción 'Crear registro'.
+33. Seleccionamos la opción 'Registro simple'. 
+34. Nos presenta una ventana donde nos pide ciertos datos (el prefijo para el dominio, la locación del servidor, etc.).
+35. Es importante que se elija la opción 'Alias del Classic Load Balancer' para que nos deje elegir el balanceador que creamos como opción de redireccionamiento.
+36. Elegimos la opción 'Definir registro simple'.
+37. Esperamos que se inicien los servicios y luego ya podremos acceder a las páginas definidas en el balanceador por medio de nuestro nombre de dominio.
